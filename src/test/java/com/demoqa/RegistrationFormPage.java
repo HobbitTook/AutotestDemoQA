@@ -7,6 +7,7 @@ import com.demoqa.Components.CalendarComponent;
 import com.demoqa.Components.ResultsModal;
 import com.demoqa.Components.StateAndCity;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 
 import java.io.File;
 

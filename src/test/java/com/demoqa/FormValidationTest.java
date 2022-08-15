@@ -21,7 +21,6 @@ public class FormValidationTest {
         Configuration.browserSize = "1920x1980";
     }
 
-
     @Test
     void firstTest() {
         registrationFormPage.openPage()
@@ -50,9 +49,6 @@ public class FormValidationTest {
                 .checkResult("Picture", "photo.jpg")
                 .checkResult("Address", "test")
                 .checkResult("State and City", "NCR Noida");
-
-
-
 
 
     }
