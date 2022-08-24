@@ -1,0 +1,10 @@
+{
+  "name": "Frodo",
+  "age": 33,
+  "friends": {
+    "name1": "Sam",
+    "name2": "Merry",
+    "name3": "Pippin"
+
+  }
+  }
