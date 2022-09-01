@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.github.javafaker.Faker;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -46,4 +47,11 @@ public class TestData {
     public String dateOfBirth = format("%s %s,%s", day, month, year);
     public String stateAndCity = format("%s %s", state, city);
 
+    @AfterEach
+    void addAttachments() {
+        AllureAttach.screenshotAs("Screenshot");
+        AllureAttach.pageSource();
+        AllureAttach.browserConsoleLogs();
+        AllureAttach.addVideo();
+    }
 }

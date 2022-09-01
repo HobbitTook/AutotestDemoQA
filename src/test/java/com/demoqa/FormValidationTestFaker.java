@@ -40,12 +40,6 @@ public class FormValidationTestFaker extends TestData {
                 .checkResult("Address", currentAddress)
                 .checkResult("State and City", stateAndCity);
 
-        @AfterEach
-        void addAttachments() {
-            AllureAttach.screenshotAs("Screenshot");
-            AllureAttach.pageSource();
-            AllureAttach.browserConsoleLogs();
-            AllureAttach.addVideo();
-        }
+
     }
 }
