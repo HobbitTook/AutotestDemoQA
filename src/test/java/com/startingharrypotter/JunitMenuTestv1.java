@@ -37,7 +37,8 @@ public class JunitMenuTestv1 {
         );
     }
 
-
+    @Test
+    @Disabled
     @MethodSource("dataProviderForLiveLibMenuTest")
     @ParameterizedTest(name = "В Меню после скролла влево есть пункт {0}")
     void liveLibMenuTest(String menu) {
