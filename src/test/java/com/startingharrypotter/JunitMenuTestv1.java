@@ -3,6 +3,8 @@ package com.startingharrypotter;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -22,7 +24,8 @@ public class JunitMenuTestv1 {
         Configuration.holdBrowserOpen = true;
         Configuration.browserSize = "2560x1440";
     }
-
+    @Test
+    @Disabled
     static Stream<Arguments> dataProviderForLiveLibMenuTest() {
         return Stream.of(
                 Arguments.of("Magical Sweets & Treats"),

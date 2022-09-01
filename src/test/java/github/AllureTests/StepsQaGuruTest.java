@@ -6,6 +6,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.withText;
@@ -18,6 +19,7 @@ public class StepsQaGuruTest {
     private static final String REPOSITORY = "qa_guru_14_10";
 
     @Test
+    @Disabled
     public void testLambdaStep() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -38,6 +40,7 @@ public class StepsQaGuruTest {
     }
 
     @Test
+    @Disabled
     public void testAnnotatedStepAttachment() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         WebSteps steps = new WebSteps();

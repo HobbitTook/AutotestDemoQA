@@ -2,6 +2,8 @@ package com.startingharrypotter;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -27,7 +29,8 @@ public class JunitMenuTestv2 {
             "How to Get to Hogwarts",
             "What is Quidditch?",
     })
-
+    @Test
+    @Disabled
     @ParameterizedTest(name = "В Меню после скролла влево есть пункт {0}")
     void liveLibMenuTest(String menu) {
         open("https://www.startingharrypotter.com/explore");

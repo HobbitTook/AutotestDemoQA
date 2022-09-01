@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.commands.ShouldHave;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -28,6 +29,7 @@ public class PricingTest {
     }
 
     @Test
+    @Disabled
     void firstTest() {
         //открыть страницу github.com
         open("https://github.com/");

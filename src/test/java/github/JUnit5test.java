@@ -3,6 +3,7 @@ package github;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -28,6 +29,7 @@ public class JUnit5test {
     }
 
     @Test
+    @Disabled
     void firstTest() {
         //открыть страницу github.com
         open("https://github.com/");

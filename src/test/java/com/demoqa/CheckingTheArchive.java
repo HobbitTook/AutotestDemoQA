@@ -4,6 +4,7 @@ package com.demoqa;
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.InputStream;
@@ -21,6 +22,7 @@ public class CheckingTheArchive {
 
 
     @Test
+    @Disabled
     void zipXLSReaderTest() throws Exception {
         InputStream is = classLoader.getResourceAsStream("Archive.zip");
         ZipInputStream zip = new ZipInputStream(is);
@@ -44,6 +46,7 @@ public class CheckingTheArchive {
 
 
     @Test
+    @Disabled
     void zipPdfReader() throws Exception {
         InputStream is = classLoader.getResourceAsStream("Archive.zip");
         ZipInputStream zip = new ZipInputStream(is);
@@ -62,6 +65,7 @@ public class CheckingTheArchive {
 
 
     @Test
+    @Disabled
     void zipCsvReader() throws Exception {
         InputStream is = classLoader.getResourceAsStream("Archive.zip");
         ZipInputStream zip = new ZipInputStream(is);

@@ -2,6 +2,7 @@ package com.demoqa;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.InputStream;
@@ -15,6 +16,7 @@ public class TestJson {
     ClassLoader classLoader = TestJson.class.getClassLoader();
 
     @Test
+    @Disabled
     void jsonParser() throws Exception {
         InputStream is = classLoader.getResourceAsStream("hobbits.json");
         ObjectMapper objectMapper = new ObjectMapper();
