@@ -20,9 +20,13 @@ public class TestData {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "2560x1440";
-        Configuration.holdBrowserOpen = true;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.browser = System.getProperty("browser_name", "chrome");
+        Configuration.browserVersion = System.getProperty("browser_version", "104.0");
+        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+
+        if (System.getProperty("selenide.remote") != null) {
+            Configuration.remote = System.getProperty("selenide.remote");
+        }
 
     }
 
