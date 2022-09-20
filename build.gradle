@@ -69,5 +69,5 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
-}
+} 
 
